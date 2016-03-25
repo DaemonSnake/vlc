@@ -170,7 +170,12 @@ int vlc_rename (const char *oldpath, const char *newpath)
 
 char *vlc_getcwd (void)
 {
-    long path_max = pathconf (".", _PC_PATH_MAX);
+    long path_max;
+#ifdef HAVE_PATHCONF
+    path_max = pathconf (".", _PC_PATH_MAX);
+#else
+    path_max = -1;
+#endif
     size_t size = (path_max == -1 || path_max > 4096) ? 4096 : path_max;
 
     for (;; size *= 2)
