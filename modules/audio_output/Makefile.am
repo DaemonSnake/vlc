@@ -123,3 +123,10 @@ libtizen_audio_plugin_la_SOURCES = audio_output/tizen_audio.c
 libtizen_audio_plugin_la_CFLAGS = $(AM_CFLAGS)
 EXTRA_LTLIBRARIES += libtizen_audio_plugin.la
 aout_LTLIBRARIES += $(LTLIBtizen_audio)
+
+libppapi_aout_plugin_la_SOURCES = audio_output/ppapi.c
+libppapi_aout_plugin_la_CPPFLAGS = $(AM_CPPFLAGS) -MP -MD
+libppapi_aout_plugin_la_CFLAGS = $(AM_CFLAGS)
+if HAVE_NACL
+aout_LTLIBRARIES += libppapi_aout_plugin.la
+endif
