@@ -301,6 +301,9 @@ $Id$
  * ppapi_access: Access module for Ppapi Nacl
  * ppapi_aout: Audio output for Ppapi Nacl
  * ppapi_control: Control module for Ppapi Nacl
+ * ppapi_vout_gl: PPAPI Context3D manager extension module
+ * ppapi_vout_graphics3d: A video output module for PPAPI using its Graphics3D interface.
+ * ppapi_vout_window: A "window" provider for PPAPI
  * prefetch: Stream prefetching stream filter
  * projectm: visualisation using libprojectM
  * ps: input module for MPEG PS decapsulation

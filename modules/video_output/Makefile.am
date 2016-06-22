@@ -359,3 +359,22 @@ vout_LTLIBRARIES += \
 	libvdummy_plugin.la \
 	libvmem_plugin.la \
 	libyuv_plugin.la
+
+libppapi_vout_gl_plugin_la_SOURCES = video_output/ppapi/gl.c
+libppapi_vout_gl_plugin_la_CPPFLAGS = $(AM_CPPFLAGS) -MP -MD
+libppapi_vout_gl_plugin_la_CFLAGS = $(AM_CFLAGS)
+
+libppapi_vout_graphics3d_plugin_la_SOURCES = video_output/ppapi/graphics3d.c
+libppapi_vout_graphics3d_plugin_la_CPPFLAGS = $(AM_CPPFLAGS) -MP -MD
+libppapi_vout_graphics3d_plugin_la_CFLAGS = $(AM_CFLAGS)
+
+libppapi_vout_window_plugin_la_SOURCES = video_output/ppapi/window.c
+libppapi_vout_window_plugin_la_CPPFLAGS = $(AM_CPPFLAGS) -MP -MD
+libppapi_vout_window_plugin_la_CFLAGS = $(AM_CFLAGS)
+
+if HAVE_NACL
+vout_LTLIBRARIES += \
+	libppapi_vout_graphics3d_plugin.la \
+	libppapi_vout_gl_plugin.la \
+	libppapi_vout_window_plugin.la
+endif
