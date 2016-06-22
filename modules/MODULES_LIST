@@ -300,6 +300,7 @@ $Id$
  * postproc: Video post processing filter
  * ppapi_access: Access module for Ppapi Nacl
  * ppapi_aout: Audio output for Ppapi Nacl
+ * ppapi_control: Control module for Ppapi Nacl
  * prefetch: Stream prefetching stream filter
  * projectm: visualisation using libprojectM
  * ps: input module for MPEG PS decapsulation
