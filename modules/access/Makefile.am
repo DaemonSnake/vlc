@@ -462,3 +462,10 @@ libaccess_mtp_plugin_la_LIBADD = $(MTP_LIBS)
 libaccess_mtp_plugin_la_LDFLAGS = $(AM_LDFLAGS) -rpath '$(accessdir)'
 access_LTLIBRARIES += $(LTLIBaccess_mtp)
 EXTRA_LTLIBRARIES += libaccess_mtp_plugin.la
+
+libppapi_access_plugin_la_SOURCES = access/ppapi.cpp
+libppapi_access_plugin_la_CPPFLAGS = $(AM_CPPFLAGS) -MP -MD
+libppapi_access_plugin_la_CXXFLAGS = $(AM_CXXFLAGS)
+if HAVE_NACL
+access_LTLIBRARIES += libppapi_access_plugin.la
+endif
