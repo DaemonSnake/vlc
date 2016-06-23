@@ -23,6 +23,10 @@
 #define MODULE_NAME ppapi_vout_gl
 #define MODULE_STRING "ppapi_vout_gl"
 
+#ifdef HAVE_CONFIG
+# include "config.h"
+#endif
+
 #include <stdint.h>
 #include <assert.h>
 

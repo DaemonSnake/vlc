@@ -19,6 +19,10 @@
 #define MODULE_NAME ppapi_control
 #define MODULE_STRING "ppapi_control"
 
+#ifdef HAVE_CONFIG
+# include "config.h"
+#endif
+
 #include <vlc_common.h>
 #include <vlc_plugin.h>
 #include <vlc_ppapi.h>

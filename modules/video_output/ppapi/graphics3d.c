@@ -23,6 +23,10 @@
 #define MODULE_NAME ppapi_vout_graphics3d
 #define MODULE_STRING "ppapi_vout_graphics3d"
 
+#ifdef HAVE_CONFIG
+# include "config.h"
+#endif
+
 #include <stdlib.h>
 #include <assert.h>
 

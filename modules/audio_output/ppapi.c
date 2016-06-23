@@ -19,6 +19,10 @@
 #define MODULE_NAME ppapi_aout
 #define MODULE_STRING "ppapi_aout"
 
+#ifdef HAVE_CONFIG
+# include "config.h"
+#endif
+
 #include <vlc_common.h>
 #include <vlc_atomic.h>
 #include <vlc_block_helper.h>
